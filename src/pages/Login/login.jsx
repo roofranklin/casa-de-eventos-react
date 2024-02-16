@@ -1,3 +1,4 @@
+import {Container, Title} from './login.style'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
@@ -31,13 +32,25 @@ const Login = () => {
     };
     return (
         // AQUI ENTRA O FORMULÁRIO DA TELA
-        <div>
-            <h1>Login</h1>
-            <input type="text" placeholder="Nome" value={nome} onChange={e => setNome(e.target.value)} />
-            <input type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
+        <Container>
+            <Title>Login</Title>
+            <input 
+                type="text" 
+                placeholder="Nome" 
+                value={nome} 
+                onChange={e => setNome(e.target.value)} 
+            />
+            
+            <input 
+                type="password" 
+                placeholder="Senha" 
+                value={senha} 
+                onChange={e => setSenha(e.target.value)} 
+            />
+            
             <button onClick={EfetuarLogin}>Entrar</button>
             {erro && <p>{erro}</p>}
-        </div>
+        </Container>
     );
 
 };
