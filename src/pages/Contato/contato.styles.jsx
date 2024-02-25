@@ -23,6 +23,7 @@ export const ContatoContainer = styled.div`
 `;
 
 export const FormContainer = styled.div`
+    width: 400px;
     background-color: #fff  ;
     padding: 20px;
     border-radius: 8px;
@@ -51,6 +52,8 @@ export const FormTextArea = styled.textarea`
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 100px;
+  resize: none;
 `;
 
 export const FormButton = styled.button`
