@@ -39,5 +39,18 @@
       "email": "joao@ig.com.br",
       "senha": "123456"
     }
+  ],
+  "contato": [
+    {
+      "nome": "Vitor",
+      "email": "vitor.albuquerque.mun@gmail.com",
+      "mensagem": "oi quero marcar um evento"
+    },
+    {
+      "id": "c640",
+      "nome": "vitor albuquerque",
+      "email": "vitoralbuquerque@alu.ufc.br",
+      "mensagem": "asdasdasd"
+    }
   ]
 }
