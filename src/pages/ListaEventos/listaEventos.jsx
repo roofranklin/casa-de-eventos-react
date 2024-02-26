@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
 import Cabecalho from '../../components/Cabecalho/cabecalho'
@@ -18,7 +18,6 @@ import {
 function ListaEventos() {
 
     const [eventos, setEventos] = useState([]);
-
     const excluirEvento = async (id) => {
         try {
             await axios.delete(`http://localhost:3000/eventos/${id}`);
@@ -56,9 +55,10 @@ function ListaEventos() {
                             <CabecalhoItem width="100px">É privado?</CabecalhoItem>
                             <CabecalhoItem>Ações</CabecalhoItem>
                         </CabecalhoLinha>
+                        <h1>olá, admin</h1>
                         <Link to="/Adicionaevento">
       <button type="button">Adiciona evento</button>
-    </Link>
+                        </Link>
                     </CabecalhoTabela>
                     <CorpoTabela>
                         { eventos.map((evento, index) => (

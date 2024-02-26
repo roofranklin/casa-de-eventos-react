@@ -27,6 +27,7 @@ const Login = () => {
     const [nome, setNome] = useState('');
     const [senha, setSenha] = useState('');
     const navigate = useNavigate();
+    
 
     // FUNÇÃO PARA CONSULTAR API E VERIFICAR SE USUÁRIO E SENHA ESTÃO CORRETOS
     const EfetuarLogin = async () => {
@@ -37,6 +38,8 @@ const Login = () => {
             // VERIFICA SE USUÁRIO E SENHA FORAM ENCONTRADOS
             const usuarioEncontrado = usuarios.find(usuario => usuario.nome === nome && usuario.senha === senha);
             if (usuarioEncontrado) {
+                
+                
                 toast.success('Login efetuado com sucesso!', {
                     position: "top-right",
                     autoClose: 3000,
@@ -88,5 +91,6 @@ const Login = () => {
     );
 
 };
+
 
 export default Login;
