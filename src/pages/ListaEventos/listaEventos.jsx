@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import axios from 'axios'
-
+import { Link } from 'react-router-dom';
 import Cabecalho from '../../components/Cabecalho/cabecalho'
 import Rodape from '../../components/Rodape/rodape'
 import { 
@@ -56,6 +56,9 @@ function ListaEventos() {
                             <CabecalhoItem width="100px">É privado?</CabecalhoItem>
                             <CabecalhoItem>Ações</CabecalhoItem>
                         </CabecalhoLinha>
+                        <Link to="/Adicionaevento">
+      <button type="button">Adiciona evento</button>
+    </Link>
                     </CabecalhoTabela>
                     <CorpoTabela>
                         { eventos.map((evento, index) => (
@@ -64,7 +67,7 @@ function ListaEventos() {
                             <EventoItem>{ evento.data } - { evento.horario }</EventoItem>
                             <EventoItem>{ evento.preco }</EventoItem>
                             <EventoItem>{ evento.url_da_imagem }</EventoItem>
-                            <EventoItem>{ evento.esta_privado }</EventoItem>
+                            <EventoItem>{ evento.evento_privado ? 'Sim' : 'Não' }</EventoItem>
                             <EventoItem>
                                 <BotaoRemover onClick={() => {excluirEvento(evento.id)}}>Excluir</BotaoRemover>
                             </EventoItem>                           

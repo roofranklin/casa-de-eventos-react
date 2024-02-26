@@ -9,6 +9,7 @@ import Contato from './pages/Contato/contato'
 import Exercicios from './pages/Exercicios/exercicios'
 
 import './index.css'
+import AdicionaEvento from './pages/AdicionaEvento/AdicionarEvento'
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/evento/:id" element={<DetalhesEvento />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/exercicios"element={<Exercicios />} />
+          <Route path= "/AdicionaEvento"element = {<AdicionaEvento/>}/>
         </Routes>
        </BrowserRouter>
     )
